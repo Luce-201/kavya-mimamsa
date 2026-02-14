@@ -13,10 +13,11 @@ collections:
   poems:
     output: true
     permalink: /poems/:name/
-  glossary:
-    output: false
+  poets:
+    output: true
+    permalink: /poets/:name/
 
-# Theme (we'll use a simple one for now)
+# Theme
 theme: minima
 
 # Defaults
@@ -26,3 +27,8 @@ defaults:
       type: "poems"
     values:
       layout: "poem"
+  - scope:
+      path: ""
+      type: "poets"
+    values:
+      layout: "poet"
