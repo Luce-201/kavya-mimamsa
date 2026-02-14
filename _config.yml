@@ -1,0 +1,28 @@
+# Site settings
+title: Kavya-Mimamsa
+description: A collection of Braj and Awadhi poetry with word meanings
+baseurl: "/kavya-mimamsa"
+url: "https://luce-201.github.io"
+
+# Language and script settings
+lang: hi
+encoding: utf-8
+
+# Collections for organizing content
+collections:
+  poems:
+    output: true
+    permalink: /poems/:name/
+  glossary:
+    output: false
+
+# Theme (we'll use a simple one for now)
+theme: minima
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "poems"
+    values:
+      layout: "poem"
