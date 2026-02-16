@@ -1,6 +1,6 @@
 [build]
-  command = "echo 'No build needed - using GitHub Pages'"
-  publish = "."
+  command = "mkdir -p _site && echo 'Using GitHub Pages' > _site/index.html"
+  publish = "_site"
 
 [build.environment]
   NODE_VERSION = "18"
