@@ -1,0 +1,38 @@
+backend:
+  name: github
+  repo: Luce-201/kavya-mimamsa
+  branch: main
+  base_url: https://api.netlify.com
+  auth_endpoint: auth
+
+media_folder: "assets/images"
+public_folder: "/kavya-mimamsa/assets/images"
+
+collections:
+  # Poems Collection
+  - name: "poems"
+    label: "कविताएँ (Poems)"
+    folder: "_poems"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "शीर्षक (Title)", name: "title", widget: "string"}
+      - {label: "कवि (Author)", name: "author", widget: "string"}
+      - {label: "भाषा (Language)", name: "language", widget: "select", options: ["ब्रज", "अवधी", "हिंदी"]}
+      - {label: "Poet ID", name: "poet_id", widget: "string", hint: "English name like: surdas, tulsidas"}
+      - {label: "कविता (Poem Content)", name: "body", widget: "markdown", hint: "Use this format: <span class=\"dict-word\" data-meaning=\"meaning\">word</span>"}
+
+  # Poets Collection
+  - name: "poets"
+    label: "कवि परिचय (Poets)"
+    folder: "_poets"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "नाम (Name in Hindi)", name: "name", widget: "string"}
+      - {label: "Name in English", name: "name_english", widget: "string"}
+      - {label: "जन्म वर्ष (Birth Year)", name: "birth_year", widget: "string"}
+      - {label: "मृत्यु वर्ष (Death Year)", name: "death_year", widget: "string"}
+      - {label: "भाषा (Language)", name: "language", widget: "select", options: ["ब्रज", "अवधी", "हिंदी"]}
+      - {label: "Poet ID", name: "poet_id", widget: "string"}
+      - {label: "जीवन परिचय (Biography)", name: "body", widget: "markdown"}
